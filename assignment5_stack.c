@@ -45,7 +45,8 @@ void creat_emptyStack(st *myStack){
 void pushtostack(st *myStack,int value){
 
     if(isStackFull(myStack)){
-        printf("Stack is full");
+        printf("Stack is full\n");
+        printStackdata(myStack);
     }else{
 
         myStack->top++;
@@ -61,7 +62,7 @@ void pushtostack(st *myStack,int value){
 void popfromstack(st *myStack){
 
     if(isStackEmpty(myStack)){
-        printf("Sack is empty.");
+        printf("Sack is empty.\n");
     }else{
 
 
@@ -111,6 +112,14 @@ int main(){
     pushtostack(myStack,7);
 
     printStackdata(myStack);
+
+    pushtostack(myStack,5);
+    pushtostack(myStack,6);
+    pushtostack(myStack,7);
+    pushtostack(myStack,5);
+    pushtostack(myStack,6);
+    pushtostack(myStack,7);
+
 
     return 0;
 }
